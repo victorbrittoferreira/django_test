@@ -1,0 +1,17 @@
+acRequisitos:
+
+CRUD contendo:
+- Código
+- Nome
+- Telefone
+- Endereço
+- CPF
+
+Observações:
+- O sistema deverá colocar uma máscara ao digitar o telefone
+- Deverá ter um botão customizado na tela “Emitir Relatório” que irá gerar um PDF com todos os registros cadastrados, apresentando, de forma tabular, os seguintes dados:
+- Código
+- Nome
+- Telefone
+
+Data da entrega: 17/01/2021
