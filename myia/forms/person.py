@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 #from input_mask.widgets import InputMask
-from models import Person
+from myia.models import Person
 from django import forms
 
 
