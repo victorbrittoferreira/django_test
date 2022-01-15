@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, reverse
-
 from myia.models import Person
 from myia.forms.person import PersonForm  
+
+from django.shortcuts import render, redirect, reverse
 
 
 
@@ -15,4 +15,6 @@ def delete_person(request, id):
     pass
 
 def error(request):
-    pass
+    context = {
+    }
+    return render(request, "myia/error.html", context)
