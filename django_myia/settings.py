@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myia',
+    'easy_mask',
+    'cpf_field',
+    'input_mask',
 ]
 
 MIDDLEWARE = [
