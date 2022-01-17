@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myia',
-    'easy_mask',
-    'cpf_field',
-    'input_mask',
 ]
+#    'cpf_field',
+#    'input_mask',
+#    'easy_mask',
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
