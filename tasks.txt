@@ -1,6 +1,6 @@
-acRequisitos:
+Requisitos:
 
-CRUD contendo:
+VCRUD contendo:
 - Código
 - Nome
 - Telefone
@@ -8,8 +8,8 @@ CRUD contendo:
 - CPF
 
 Observações:
-- O sistema deverá colocar uma máscara ao digitar o telefone
-- Deverá ter um botão customizado na tela “Emitir Relatório” que irá gerar um PDF com todos os registros cadastrados, apresentando, de forma tabular, os seguintes dados:
+V O sistema deverá colocar uma máscara ao digitar o telefone
+V Deverá ter um botão customizado na tela “Emitir Relatório” que irá gerar um PDF com todos os registros cadastrados, apresentando, de forma tabular, os seguintes dados:
 - Código
 - Nome
 - Telefone

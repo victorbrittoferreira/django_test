@@ -5,5 +5,7 @@ django-filter
 ipython
 autopep8
 pylint
+weasyprint
+django-object-actions
 #psycopg2>=2.8
 #psycopg2-binary

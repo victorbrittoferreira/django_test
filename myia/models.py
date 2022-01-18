@@ -1,9 +1,5 @@
 from django.db import models
 from django.db.models import fields
-#from django.db.models.fields import DecimalField, Field
-#from cpf_field.models import CPFField
-
-#from django import template
 
 
 class Person(models.Model):
@@ -32,4 +28,6 @@ class Person(models.Model):
         elif self.phone:
             return f'({self.phone[0:2]}){self.phone[2:6]}-{self.phone[6:10]}'
 
-    phone_mask.short_description = 'PHONE'  
+    
+    #phone_mask,label = 'Phone Mask'
+    phone_mask.short_description = 'PHONE'
