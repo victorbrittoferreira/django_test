@@ -1,6 +1,6 @@
 Requisitos:
 
-VCRUD contendo:
+V - CRUD contendo:
 - Código
 - Nome
 - Telefone

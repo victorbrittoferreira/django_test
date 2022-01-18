@@ -20,14 +20,16 @@ def create_person(request):
 
             return redirect('list_people')
 
-        return render(request, 'people_form.html', {'form': form})
+        return render(request, 
+            'create_person_form.html', {'form': form})
 
     except:
         return redirect(reverse('error'))
     
 def list_people(request):
     people = Person.objects.all()
-    return render(request, 'people.html', {'people': people})
+    return render(request, 
+        'list_people.html', {'people': people})
 
 def update_person(request,id):
     person = Person.objects.get(id=id)
@@ -37,7 +39,7 @@ def update_person(request,id):
         form.save()
         return redirect('list_people')
 
-    return render(request, 'people_form.html',
+    return render(request, 'create_person_form.html',
         {'form': form, 'person': person})
 
 def delete_person(request, id):
@@ -48,8 +50,8 @@ def delete_person(request, id):
             person.delete()
             return redirect('list_people')
 
-        return render(request, 'delete_person_confirm.html', 
-            {'person': person})
+        return render(request, 
+            'delete_person_confirm.html', {'person': person})
 
     except:
         return redirect(reverse('error'))
@@ -61,7 +63,7 @@ def html_to_pdf_view(request):
     """Generate pdf."""
 
     # Model data
-    people = Person.objects.all().order_by('name')
+    people = Person.objects.all().order_by('id')
 
     # Rendered
     html_string = render_to_string(
