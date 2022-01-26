@@ -1,0 +1,30 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY IA</title>
+</head>
+<body>
+    <h1>Create, update or delete a person</h1>
+<form method="post" actions = "." onsubmit="unmask()" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value= "Save" >
+    <input type="reset" value= "Cancel" onclick="location.href = '{% url 'myia:list' %}'">
+</form>
+    
+    <!-- JS query-->
+    {% block scripts %}
+    <script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+    <script src={% static 'js/jquery.mask.min.js' %}></script>
+    <script src={% static 'js/mask.js' %}></script>
+    <script src={% static 'js/unmask.js' %}></script>
+
+    {% endblock %}
+</body>
+</html>

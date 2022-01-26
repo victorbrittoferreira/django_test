@@ -3,7 +3,6 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,17 +26,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myia'
 ]
 
 THIRD_PARTY_APPS = [
     'django_object_actions',
 ]
 
-LOCAL_APPS = [
-    'myia',
-]
+#LOCAL_APPS = [
+#    'myia',
+#]
 
-INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + INSTALLED_APPS
+INSTALLED_APPS =  THIRD_PARTY_APPS + INSTALLED_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +54,8 @@ ROOT_URLCONF = 'django_myia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        #'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -120,7 +121,6 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '/static/')
 ]
-
 
 STATIC_URL = '/static/'
 
